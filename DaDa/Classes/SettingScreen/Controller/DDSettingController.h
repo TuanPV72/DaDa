@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DDMessageController : UIViewController
+@interface DDSettingController : UIViewController
 
 @end

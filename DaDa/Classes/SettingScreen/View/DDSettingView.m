@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 MAC. All rights reserved.
 //
 
-#import "DDMessageView.h"
+#import "DDSettingView.h"
 #import "MHTabBarController.h"
 
-@implementation DDMessageView
+@implementation DDSettingView
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [[[NSBundle mainBundle] loadNibNamed:@"DDMessageView" owner:self options:nil] objectAtIndex:0];
+    self = [[[NSBundle mainBundle] loadNibNamed:@"DDSettingView" owner:self options:nil] objectAtIndex:0];
     if (self) {
         
         

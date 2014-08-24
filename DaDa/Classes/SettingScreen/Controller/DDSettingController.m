@@ -6,24 +6,24 @@
 //  Copyright (c) 2014 MAC. All rights reserved.
 //
 
-#import "DDMessageController.h"
-#import "DDMessageView.h"
-//#import "SWRevealViewController.h"
+#import "DDSettingController.h"
+#import "DDSettingView.h"
+#import "SWRevealViewController.h"
 
-@interface DDMessageController ()
+@interface DDSettingController ()
 {
-    DDMessageView *_homeView;
+    DDSettingView *_homeView;
 }
 
 @end
 
-@implementation DDMessageController
+@implementation DDSettingController
 
 -(void)loadView
 {
     [super loadView];
     
-    _homeView = [[DDMessageView alloc] initWithFrame:CGRectZero];
+    _homeView = [[DDSettingView alloc] initWithFrame:CGRectZero];
     
     self.view = _homeView;
 }
@@ -46,21 +46,15 @@
      */
 }
 
-- (void)didReceiveMemoryWarning
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:YES];
+    
+    SWRevealViewController *revealController =  [self revealViewController];
+    
+    if (revealController) {
+        [self.view addGestureRecognizer:revealController.panGestureRecognizer];
+    }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DDMessageView : UIView
+@interface DDFriendView : UIView
 
 @end
